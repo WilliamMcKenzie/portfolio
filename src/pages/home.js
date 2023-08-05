@@ -1,7 +1,7 @@
-import NavBar from "../components/navbar";
+import AboutMe from "../components/aboutMe";
 
 const Home = () => {
-    return (<div><NavBar /></div>)
+    return (<div><AboutMe /></div>)
 }
 
 export default Home
