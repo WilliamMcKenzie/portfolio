@@ -1,10 +1,8 @@
-import AboutMe from "../components/aboutMe";
-import NavBar from "../components/navBar";
+import HomeComponent from "../components/home";
 
 const Home = () => {
     return (<div className="home">
-        <NavBar />
-        <AboutMe />
+        <HomeComponent />
     </div>)
 }
 

@@ -1,33 +1,138 @@
+.App {
+  --primary1: #2D2D2D;
+  --primary2: #262626;
+  --primary3: #1E1E1E;
+}
+
 .home {
   display: flex;
   flex-direction: column;
 }
 
 .navBar {
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  background-color: #2D2D2D;
+  display: flex;
+  border-top: 2px solid var(--primary3);
+  background-color: var(--primary1);
 }
 
 .pageLink {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
   padding: 15px;
 
   font-weight: 450;
   font-family: 'UI';
+  border-right: 2px solid var(--primary3);
 
   color: #959595;
 }
 
 .pageLink:hover {
-  background-color: #1E1E1E;
+  background-color: var(--primary2);
+}
+
+.selected {
+  background-color: var(--primary3);
   color: aliceblue;
+}
+
+.selected .pageLinkClose {
+  visibility: visible;
+}
+
+.pageLink:hover .pageLinkClose {
+  visibility: visible;
 }
 
 .pageLinkIcon {
   height: 15px;
   padding-right: 10px;
   width: auto;
+}
+
+.pageLinkClose {
+  visibility: hidden;
+  margin-left: 10px;
+
+  color: var(--primary1);
+  border: none;
+  border-radius: 10px;
+  background: none;
+
+  font-size: 1.25rem;
+}
+
+.pageLinkClose:hover {
+  cursor: pointer;
+  background: var(--primary1);
+}
+
+.x {
+  width: 14px;
+  height: 14px;
+}
+
+.pageLinkJS {
+  height: 12px;
+  padding-right: 10px;
+  width: auto;
+}
+
+/* home section */
+.home {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 10px;
+  padding-left: 20px;
+  padding-top: 15vh;
+}
+
+.profile {
+  font-weight: 450;
+  font-family: 'CodeFont';
+  font-size: 3rem;
+  color: rgb(174, 174, 174);
+}
+
+.name {
+  font-size: 4rem;
+  color: aliceblue;
+}
+
+.profileButtons button {
+  padding: 15px;
+  font-weight: 450;
+  font-family: 'CodeFont';
+  font-size: 2rem;
+
+  margin-right: 3rem;
+
+  border: 5px solid aliceblue;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.profileButtons button:hover {
+  color: aliceblue;
+  background-color: var(--primary1);
+  border: 5px solid rgb(158, 161, 164);
+
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+.profileButtons button:active {
+  background-color: aliceblue;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 aliceblue;
+  }
 }
 
 .aboutMe {
@@ -77,11 +182,6 @@
   color: #8ADDFF;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-
-.App-link {
-  color: #000000;
 }
 
 @keyframes App-logo-spin {
