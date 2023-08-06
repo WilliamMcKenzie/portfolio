@@ -14,8 +14,8 @@ import { useState } from "react"
 export const MyRoutes = () => {
     const navigate = useNavigate();
 
-    const [homeClass, homeSwitch] = useState("pageLink")
-    const [aboutClass, aboutSwitch] = useState("pageLink selected")
+    const [homeClass, homeSwitch] = useState("pageLink selected")
+    const [aboutClass, aboutSwitch] = useState("pageLink")
     const [projectsClass, projectsSwitch] = useState("pageLink")
     const [contactClass, contactSwitch] = useState("pageLink")
 
