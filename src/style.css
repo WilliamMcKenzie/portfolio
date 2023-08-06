@@ -1,16 +1,54 @@
-.App {
-  text-align: center;
-  background-color: #7BCBEC;
+.home {
+  display: flex;
+  flex-direction: column;
+}
 
-  width: 100vw;
-  height: 100vh;
+.navBar {
+  padding-top: 15px;
+  padding-bottom: 15px;
 
+  background-color: #2D2D2D;
+}
+
+.pageLink {
+  padding: 15px;
+
+  font-weight: 450;
+  font-family: 'UI';
+
+  color: #959595;
+}
+
+.pageLink:hover {
+  background-color: #1E1E1E;
+  color: aliceblue;
+}
+
+.pageLinkIcon {
+  height: 15px;
+  padding-right: 10px;
+  width: auto;
 }
 
 .aboutMe {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  color: #5A9C4C;
+  font-family: "Consolas";
+
+}
+
+@font-face {
+  font-family: 'CodeFont';
+  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'UI';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Segoe\ UI.woff') format('woff');
 }
 
 .description {
@@ -18,26 +56,32 @@
   text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.name {
+.importContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3C0C61;
+  font-size: 1.5rem;
 }
+
+.pinkText {
+  color: #D081C4;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.orangeText {
+  color: #D88E73;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.blueText {
+  color: #8ADDFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 @keyframes App-logo-spin {
