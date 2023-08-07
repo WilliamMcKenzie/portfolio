@@ -193,3 +193,56 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 700px) {
+  .navBar {
+    position: absolute;
+  }
+
+  .pageLink {
+    font-size: 2vw;
+    width: 20vw;
+    padding: 2.5vw;
+  }
+
+  .pageLinkIcon {
+    height: 2vw;
+    width: auto;
+  }
+
+  .pageLinkJS {
+    height: 2vw;
+    width: auto;
+  }
+
+  .x {
+    height: 2vw;
+    width: auto;
+  }
+
+  .pageLinkClose {
+    margin-left: 0.5vw;
+    display: flex;
+  }
+
+  .profile {
+    font-size: 6vw;
+  }
+
+  .name {
+    font-size: 8vw;
+  }
+
+  .profileButtons button {
+    padding: 4vw;
+    font-weight: 450;
+    font-family: 'CodeFont';
+    font-size: 4vw;
+
+    margin-right: 4vw;
+
+    border: 5px solid aliceblue;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+}
