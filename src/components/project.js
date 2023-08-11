@@ -2,6 +2,7 @@ import teamTetherPreview from '../icons/teamtetherPreview.png'
 
 const Project = () => {
     return (<div className="projects">
+        <p className="projectsHeader">Projects</p>
         <div className="projectRow">
             <div className="teamTether project">
                 <img className="projectPreview" src={teamTetherPreview}></img>

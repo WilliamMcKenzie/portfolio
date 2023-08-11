@@ -162,57 +162,18 @@
   padding-right: 5px;
 }
 
-@media (max-width: 700px) {
-  .navBar {
-    position: absolute;
-  }
+.projectsHeader {
+  font-size: 4vw;
+  font-weight: 450;
+  font-family: 'CodeFont';
 
-  .pageLink {
-    font-size: 2vw;
-    width: 20vw;
-    padding: 2.5vw;
-  }
-
-  .pageLinkIcon {
-    height: 2vw;
-    width: auto;
-  }
-
-  .pageLinkJS {
-    height: 2vw;
-    width: auto;
-  }
-
-  .x {
-    height: 2vw;
-    width: auto;
-  }
-
-  .pageLinkClose {
-    margin-left: 0.5vw;
-    display: flex;
-  }
-
-  .profile {
-    font-size: 6vw;
-  }
-
-  .name {
-    font-size: 8vw;
-  }
-
-  .profileButtons button {
-    padding: 4vw;
-    font-weight: 450;
-    font-family: 'CodeFont';
-    font-size: 4vw;
-
-    margin-right: 4vw;
-  }
+  color: aliceblue;
 }
 
 .projects {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projectRow {
@@ -280,6 +241,118 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 700px) {
+  .navBar {
+    position: absolute;
+  }
+
+  .pageLink {
+    font-size: 2vw;
+    width: 20vw;
+    padding: 2.5vw;
+  }
+
+  .pageLinkIcon {
+    height: 2vw;
+    width: auto;
+  }
+
+  .pageLinkJS {
+    height: 2vw;
+    width: auto;
+  }
+
+  .x {
+    height: 2vw;
+    width: auto;
+  }
+
+  .pageLinkClose {
+    margin-left: 0.5vw;
+    display: flex;
+  }
+
+  .profile {
+    font-size: 6vw;
+  }
+
+  .name {
+    font-size: 8vw;
+  }
+
+  .profileButtons button {
+    padding: 4vw;
+    font-weight: 450;
+    font-family: 'CodeFont';
+    font-size: 4vw;
+
+    margin-right: 4vw;
+  }
+
+  .projectsHeader {
+    margin-top: 100px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectRow {
+    display: grid;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90vw;
+
+    font-weight: 450;
+    font-family: 'CodeFont';
+
+    color: #959595;
+    border-top: 10px solid var(--primary3);
+
+    margin-bottom: 0.5vh;
+
+    background-color: var(--primary2);
+  }
+
+  .projectPreview {
+    width: 70vw;
+    height: auto;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .projectTitle {
+    font-weight: 450;
+    font-family: 'CodeFont';
+    font-size: 3vh;
+
+    color: aliceblue;
+  }
+
+  .projectTechnologies {
+    width: 70vw;
+    background-color: var(--primary3);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .projectLanguages {
+    width: 70vw;
+    background-color: var(--primary3);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}
 
 
 
