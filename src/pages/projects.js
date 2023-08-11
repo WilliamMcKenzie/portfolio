@@ -1,5 +1,10 @@
+import Project from '../components/project'
+
 const Projects = () => {
-    return (<div>My Projects</div>)
+    return (<div>
+        <p className="name">Projects</p>
+        <Project></Project>
+    </div>)
 }
 
 export default Projects

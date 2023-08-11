@@ -93,12 +93,12 @@
 .profile {
   font-weight: 450;
   font-family: 'CodeFont';
-  font-size: 3rem;
+  font-size: 3vw;
   color: rgb(174, 174, 174);
 }
 
 .name {
-  font-size: 4rem;
+  font-size: 5vw;
   color: aliceblue;
 }
 
@@ -106,9 +106,10 @@
   padding: 15px;
   font-weight: 450;
   font-family: 'CodeFont';
-  font-size: 2rem;
+  font-size: 2vw;
 
-  margin-right: 3rem;
+  margin-right: 3vw;
+  cursor: pointer;
 
   border: 5px solid aliceblue;
 }
@@ -117,21 +118,12 @@
   color: aliceblue;
   background-color: var(--primary1);
   border: 5px solid rgb(158, 161, 164);
-
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2em transparent;
 }
 
 .profileButtons button:active {
   background-color: aliceblue;
 }
 
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 aliceblue;
-  }
-}
 
 .aboutMe {
   display: flex;
@@ -140,18 +132,6 @@
   color: #5A9C4C;
   font-family: "Consolas";
 
-}
-
-@font-face {
-  font-family: 'CodeFont';
-  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype')
-}
-
-@font-face {
-  font-family: 'UI';
-  font-style: normal;
-  font-weight: normal;
-  src: url('./fonts/Segoe\ UI.woff') format('woff');
 }
 
 .description {
@@ -180,16 +160,6 @@
   color: #8ADDFF;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @media (max-width: 700px) {
@@ -239,4 +209,88 @@
 
     margin-right: 4vw;
   }
+}
+
+.projects {
+  display: grid;
+}
+
+.projectRow {
+  display: flex;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 45vw;
+
+  font-weight: 450;
+  font-family: 'CodeFont';
+
+  color: #959595;
+  border-top: 10px solid var(--primary3);
+
+  margin: 3.3vw;
+  margin-right: 0vw;
+  margin-bottom: 0vw;
+
+  background-color: var(--primary2);
+}
+
+.project:hover {
+  border-top: 10px solid var(--primary1);
+}
+
+.projectPreview {
+  width: 30vw;
+  height: auto;
+  object-fit: cover;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.projectTitle {
+  font-weight: 450;
+  font-family: 'CodeFont';
+  font-size: 1.5vw;
+
+  color: aliceblue;
+}
+
+.projectTitle:hover {
+  cursor: pointer;
+  color: #61DAFB;
+}
+
+.projectTechnologies {
+  width: 30vw;
+  background-color: var(--primary3);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.projectLanguages {
+  width: 30vw;
+  background-color: var(--primary3);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+@font-face {
+  font-family: 'CodeFont';
+  src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'UI';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Segoe\ UI.woff') format('woff');
 }

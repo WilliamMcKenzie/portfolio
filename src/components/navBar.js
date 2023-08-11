@@ -15,8 +15,8 @@ const NavBar = () => {
         navigate("/projects");
     }
 
-    function goMedia() {
-        navigate("/media");
+    function goContact() {
+        navigate("/contact");
     }
 
     return (<div className="navBar">

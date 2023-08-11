@@ -52,23 +52,21 @@ export const MyRoutes = () => {
     }
 
     return (<div>
-        <div>
-            <div className="navBar">
-                <a className={homeClass} onClick={goHome}><img className='pageLinkIcon' src={react} />home.jsx <button className='pageLinkClose'><img className="x" src={x} /></button></a>
-                <a className={aboutClass} onClick={goAbout}><img className='pageLinkIcon' src={html} />about.html <button className='pageLinkClose'><img className="x" src={x} /></button></a>
-                <a className={projectsClass} onClick={goProjects}><img className='pageLinkJS' src={js} />projects.js <button className='pageLinkClose'><img className="x" src={x} /></button></a>
-                <a className={contactClass} onClick={goContact}><img className='pageLinkIcon' src={css} />contact.css <button className='pageLinkClose'><img className="x" src={x} /></button></a>
-            </div>
-            <Routes>
-                <Route
-                    path="*"
-                    element={<Navigate to="/home" replace />}
-                />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
+        <div className="navBar">
+            <a className={homeClass} onClick={goHome}><img className='pageLinkIcon' src={react} />home.jsx <button className='pageLinkClose'><img className="x" src={x} /></button></a>
+            <a className={aboutClass} onClick={goAbout}><img className='pageLinkIcon' src={html} />about.html <button className='pageLinkClose'><img className="x" src={x} /></button></a>
+            <a className={projectsClass} onClick={goProjects}><img className='pageLinkJS' src={js} />projects.js <button className='pageLinkClose'><img className="x" src={x} /></button></a>
+            <a className={contactClass} onClick={goContact}><img className='pageLinkIcon' src={css} />contact.css <button className='pageLinkClose'><img className="x" src={x} /></button></a>
         </div>
+        <Routes>
+            <Route
+                path="*"
+                element={<Navigate to="/home" replace />}
+            />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+        </Routes>
     </div>)
 }
