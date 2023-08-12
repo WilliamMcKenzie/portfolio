@@ -1,7 +1,18 @@
 .App {
-  --primary1: #2D2D2D;
-  --primary2: #262626;
-  --primary3: #1E1E1E;
+  --primary1: #597081;
+  --primary2: #36494E;
+  --primary3: #332E3C;
+
+  --secondary1: #A9CEF4;
+  --secondary2: #7EA0B7;
+
+  display: flex;
+  justify-content: center;
+}
+
+html {
+
+  scroll-behavior: smooth;
 }
 
 .home {
@@ -26,7 +37,7 @@
   font-family: 'UI';
   border-right: 2px solid var(--primary3);
 
-  color: #959595;
+  color: var(--secondary1);
 }
 
 .pageLink:hover {
@@ -35,7 +46,7 @@
 
 .selected {
   background-color: var(--primary3);
-  color: aliceblue;
+  color: var(--secondary1);
 }
 
 .selected .pageLinkClose {
@@ -83,55 +94,111 @@
 /* home section */
 .home {
   display: flex;
+  align-items: center;
   flex-direction: column;
 
   line-height: 10px;
-  padding-left: 20px;
-  padding-top: 15vh;
+  padding: 0;
+
+}
+
+.homeLogo {
+  width: 8vw;
+  height: 8vw;
+  border-radius: 500px;
+  margin-right: 20px;
 }
 
 .profile {
   font-weight: 450;
-  font-family: 'CodeFont';
-  font-size: 3vw;
-  color: rgb(174, 174, 174);
+  font-family: 'monospace';
+  font-size: 2vw;
+  color: var(--secondary2);
+
+  display: flex;
+  align-items: center;
 }
 
 .name {
-  font-size: 5vw;
-  color: aliceblue;
+  font-size: 3vw;
+  color: var(--secondary1);
 }
 
-.profileButtons button {
-  padding: 15px;
+.profileButtons {
+  margin-top: 5vh;
+}
+
+.profileButton {
+  padding: 10px;
   font-weight: 450;
-  font-family: 'CodeFont';
-  font-size: 2vw;
+  font-family: 'monospace';
+  font-size: 1vw;
+  text-decoration: none;
 
-  margin-right: 3vw;
+  margin-right: 1vw;
   cursor: pointer;
+  background-color: var(--secondary1);
+  color: var(--primary2);
 
-  border: 5px solid aliceblue;
+  border: 5px solid var(--secondary1);
 }
 
-.profileButtons button:hover {
-  color: aliceblue;
+.profileButton:hover {
+  color: var(--secondary1);
   background-color: var(--primary1);
-  border: 5px solid rgb(158, 161, 164);
+  border: 5px solid var(--secondary1);
 }
 
-.profileButtons button:active {
-  background-color: aliceblue;
+.profileButton:active {
+  background-color: var(--secondary1);
 }
 
+.about {
+  font-weight: 450;
+  font-family: monospace;
 
-.aboutMe {
+  width: 70vw;
+  margin-top: 20vh;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  color: #5A9C4C;
-  font-family: "Consolas";
+  align-items: center;
+}
 
+.aboutP {
+  color: var(--secondary2);
+  line-height: 1.5;
+  font-size: 1vw;
+  width: 50vw;
+}
+
+.aboutFlex {
+  display: flex;
+}
+
+.aboutLanguages {
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutLanguages header {
+  color: var(--secondary1);
+  font-weight: 600;
+
+  margin: 0;
+  line-height: 1;
+  font-size: 2vw;
+}
+
+.aboutLanguages p {
+  color: var(--secondary2);
+
+  margin: 0;
+  line-height: 1;
+  font-size: 1vw;
+  text-align: center;
 }
 
 .description {
@@ -163,14 +230,17 @@
 }
 
 .projectsHeader {
-  font-size: 4vw;
+  font-size: 2vw;
   font-weight: 450;
-  font-family: 'CodeFont';
+  font-family: 'monospace';
 
-  color: aliceblue;
+  color: var(--secondary1);
 }
 
 .projects {
+  width: 70vw;
+  margin-top: 20vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,27 +255,30 @@
   flex-direction: column;
   align-items: center;
 
-  width: 45vw;
+  width: 20vw;
 
   font-weight: 450;
-  font-family: 'CodeFont';
+  font-family: 'monospace';
 
   color: #959595;
-  border-top: 10px solid var(--primary3);
 
-  margin: 3.3vw;
-  margin-right: 0vw;
-  margin-bottom: 0vw;
+  margin: 1.5vw;
 
   background-color: var(--primary2);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .project:hover {
-  border-top: 10px solid var(--primary1);
+  cursor: pointer;
+  color: #a2a2a2;
+  background-color: var(--primary1);
 }
 
 .projectPreview {
-  width: 30vw;
+  width: 15vw;
+  border-top: none;
+
   height: auto;
   object-fit: cover;
   border-bottom-left-radius: 20px;
@@ -214,19 +287,15 @@
 
 .projectTitle {
   font-weight: 450;
-  font-family: 'CodeFont';
+  font-family: 'monospace';
   font-size: 1.5vw;
 
-  color: aliceblue;
-}
-
-.projectTitle:hover {
-  cursor: pointer;
-  color: #61DAFB;
+  color: var(--secondary1);
 }
 
 .projectTechnologies {
-  width: 30vw;
+  width: 15vw;
+  line-height: 0;
   background-color: var(--primary3);
   padding: 20px;
   border-radius: 20px;
@@ -234,7 +303,8 @@
 }
 
 .projectLanguages {
-  width: 30vw;
+  width: 15vw;
+  line-height: 0;
   background-color: var(--primary3);
   padding: 20px;
   border-radius: 20px;
@@ -276,21 +346,23 @@
     font-size: 6vw;
   }
 
-  .name {
-    font-size: 8vw;
+  .homeLogo {
+    width: 10vh;
+    height: 10vh;
   }
 
-  .profileButtons button {
-    padding: 4vw;
-    font-weight: 450;
-    font-family: 'CodeFont';
-    font-size: 4vw;
+  .profileButton {
+    font-size: 2vh;
+    margin-right: 2vh;
+  }
 
-    margin-right: 4vw;
+  .name {
+    font-size: 6vw;
   }
 
   .projectsHeader {
     margin-top: 100px;
+    font-size: 4vh;
   }
 
   .projects {
@@ -308,10 +380,10 @@
     flex-direction: column;
     align-items: center;
 
-    width: 90vw;
+    width: 80vw;
 
     font-weight: 450;
-    font-family: 'CodeFont';
+    font-family: 'monospace';
 
     color: #959595;
     border-top: 10px solid var(--primary3);
@@ -322,7 +394,7 @@
   }
 
   .projectPreview {
-    width: 70vw;
+    width: 60vw;
     height: auto;
     object-fit: cover;
     border-bottom-left-radius: 20px;
@@ -331,14 +403,14 @@
 
   .projectTitle {
     font-weight: 450;
-    font-family: 'CodeFont';
+    font-family: 'monospace';
     font-size: 3vh;
 
-    color: aliceblue;
+    color: var(--secondary1);
   }
 
   .projectTechnologies {
-    width: 70vw;
+    width: 60vw;
     background-color: var(--primary3);
     padding: 20px;
     border-radius: 20px;
@@ -346,7 +418,7 @@
   }
 
   .projectLanguages {
-    width: 70vw;
+    width: 60vw;
     background-color: var(--primary3);
     padding: 20px;
     border-radius: 20px;
@@ -354,10 +426,8 @@
   }
 }
 
-
-
 @font-face {
-  font-family: 'CodeFont';
+  font-family: 'monospace';
   src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype')
 }
 

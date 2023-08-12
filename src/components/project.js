@@ -1,10 +1,17 @@
 import teamTetherPreview from '../icons/teamtetherPreview.png'
+import { useNavigate } from "react-router-dom";
 
 const Project = () => {
-    return (<div className="projects">
+    const navigate = useNavigate();
+
+    function goTeamTether() {
+        navigate("/teamtether");
+    }
+
+    return (<div className="projects" id="projects">
         <p className="projectsHeader">Projects</p>
         <div className="projectRow">
-            <div className="teamTether project">
+            <div className="teamTether project" onClick={goTeamTether}>
                 <img className="projectPreview" src={teamTetherPreview}></img>
                 <p className="projectTitle">TeamTether</p>
                 <div className="projectTechnologies">

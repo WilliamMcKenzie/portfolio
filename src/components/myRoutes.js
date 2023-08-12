@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link';
 import Home from "../pages/home"
-import About from "../pages/about"
-import Projects from "../pages/projects"
-import Contact from "../pages/contact"
 import js from '../icons/js.png'
 import css from '../icons/css.png'
 import html from '../icons/html.png'
@@ -53,6 +51,7 @@ export const MyRoutes = () => {
 
     return (<div>
         <div className="navBar">
+            <Link to="#projects" className="pageLink">Projects</Link>
             <a className={homeClass} onClick={goHome}><img className='pageLinkIcon' src={react} />home.jsx <button className='pageLinkClose'><img className="x" src={x} /></button></a>
             <a className={aboutClass} onClick={goAbout}><img className='pageLinkIcon' src={html} />about.html <button className='pageLinkClose'><img className="x" src={x} /></button></a>
             <a className={projectsClass} onClick={goProjects}><img className='pageLinkJS' src={js} />projects.js <button className='pageLinkClose'><img className="x" src={x} /></button></a>
@@ -61,12 +60,12 @@ export const MyRoutes = () => {
         <Routes>
             <Route
                 path="*"
-                element={<Navigate to="/home" replace />}
+                element={<Navigate to="/developer" replace />}
             />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/developer" element={<Home />} />
+            <Route path="/media" element={<Home />} />
+
+            <Route path="/teamtether" element={<Home />} />
         </Routes>
     </div>)
 }
