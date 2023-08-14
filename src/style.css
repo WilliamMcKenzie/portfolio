@@ -474,20 +474,9 @@ html {
     font-weight: 450;
     font-family: var(--body-font);
     font-size: 3vh;
-
-    color: var(--secondary1);
   }
 
   .projectTechnologies {
-    width: 60vw;
-    background-color: var(--primary3);
-    color: var(--primary2);
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-  }
-
-  .projectLanguages {
     width: 60vw;
     background-color: var(--primary3);
     padding: 20px;
