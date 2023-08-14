@@ -64,8 +64,6 @@ export const MyRoutes = () => {
             />
             <Route path="/developer" element={<Home />} />
             <Route path="/media" element={<Home />} />
-
-            <Route path="/teamtether" element={<Home />} />
         </Routes>
     </div>)
 }

@@ -1,4 +1,5 @@
 import teamTetherPreview from '../icons/teamtetherPreview.png'
+import open from '../icons/open.png'
 import { useNavigate } from "react-router-dom";
 
 const Project = () => {
@@ -11,7 +12,10 @@ const Project = () => {
     return (<div className="projects" id="projects">
         <p className="projectsHeader">Projects</p>
         <div className="teamTether project">
-            <img className="projectPreview" src={teamTetherPreview} onClick={goTeamTether}></img>
+            <div className="previewContainer" onClick={() => window.open("http://teamtether.williamqm.com", "_blank")}>
+                <img className="projectPreview" src={teamTetherPreview} />
+                <img className="projectOpen" src={open} />
+            </div>
             <div className="projectDetails">
                 <p className="projectTitle">TeamTether</p>
                 <div className="projectTechnologies">
@@ -27,6 +31,36 @@ const Project = () => {
                     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img>
                     <img src="https://img.shields.io/badge/HTML-D46719?style=for-the-badge&logo=html5&logoColor=white"></img>
                     <img src="https://img.shields.io/badge/CSS-317791?&style=for-the-badge&logo=css3&logoColor=white"></img>
+                </div>
+            </div>
+        </div>
+        <div className=" project">
+            <div className="previewContainer" onClick={() => window.open("http://williamqm.com", "_blank")}>
+                <img className="projectPreview" src="https://picsum.photos/1900/961" />
+                <img className="projectOpen" src={open} />
+            </div>
+            <div className="projectDetails">
+                <p className="projectTitle">Placeholder</p>
+                <div className="projectTechnologies">
+                    <p className="projectHeader">Technology</p>
+                </div>
+                <div className="projectTechnologies">
+                    <p className="projectHeader">Languages</p>
+                </div>
+            </div>
+        </div>
+        <div className=" project">
+            <div className="previewContainer" onClick={() => window.open("http://williamqm.com", "_blank")}>
+                <img className="projectPreview" src="https://picsum.photos/1899/961" />
+                <img className="projectOpen" src={open} />
+            </div>
+            <div className="projectDetails">
+                <p className="projectTitle">Placeholder</p>
+                <div className="projectTechnologies">
+                    <p className="projectHeader">Technology</p>
+                </div>
+                <div className="projectTechnologies">
+                    <p className="projectHeader">Languages</p>
                 </div>
             </div>
         </div>

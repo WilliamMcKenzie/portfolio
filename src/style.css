@@ -19,6 +19,11 @@
 
   display: flex;
   justify-content: center;
+
+  margin: auto;
+  height: 100%;
+  font-size: 18px;
+  background-color: var(--primary3);
 }
 
 html {
@@ -199,12 +204,26 @@ html {
   font-weight: 450;
   font-family: var(--body-font);
 
-  width: 70vw;
-  margin-top: 20vh;
+  width: 100vw;
+
+
+  z-index: 1;
+
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
+}
+
+.splashArt {
+  visibility: visible;
+  width: 20vw;
+  z-index: -1;
+}
+
+.aboutContent {
+  margin-left: 20px;
 }
 
 .aboutHeader {
@@ -295,11 +314,11 @@ html {
   width: 100vw;
   background: rgb(202, 240, 248);
   background: linear-gradient(90deg, rgba(202, 240, 248, 1) 0%, rgba(72, 202, 228, 1) 62%);
-  margin-top: 20vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .projectRow {
@@ -316,37 +335,74 @@ html {
   font-family: var(--body-font);
   color: var(--secondary2);
   background-color: var(--primary3);
+  border-bottom: 10px solid var(--primary1);
 
   margin: 1.5vw;
   border-bottom-left-radius: 5vh;
   border-bottom-right-radius: 5vh;
 }
 
-.projectPreview:hover {
-  cursor: pointer;
+.previewContainer {
+  position: relative;
+  display: inline;
+
+  border-right: 10px solid rgba(202, 240, 248, 1);
 }
 
 .projectPreview {
   width: 50vw;
-  border-top: none;
-
-  height: auto;
-  object-fit: cover;
+  height: 60vh;
   border-bottom-left-radius: 5vh;
+
+  object-fit: cover;
+  border-top: none;
+}
+
+.previewContainer:hover .projectPreview {
+  filter: brightness(50%);
+}
+
+.previewContainer:hover .projectOpen {
+  visibility: visible;
+}
+
+.previewContainer:hover {
+  cursor: pointer;
+}
+
+.projectOpen {
+  visibility: hidden;
+  position: absolute;
+
+  width: 3vw;
+  top: 10px;
+  right: 10px;
+}
+
+.productOpen:hover {
+  cursor: pointer;
 }
 
 .projectDetails {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+
+  width: 100%;
 }
 
 .projectTitle {
-  font-weight: 450;
+  font-weight: var(--font-semi-bold);
   font-family: var(--body-font);
-  font-size: 1.5vw;
+  font-size: 3vw;
+  width: 100%;
 
-  color: var(--secondary1);
+  color: var(--primary3);
+  background: rgb(202, 240, 248);
+  background: linear-gradient(90deg, rgba(202, 240, 248, 1) 0%, rgba(72, 202, 228, 1) 62%);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .projectTechnologies {
@@ -361,7 +417,55 @@ html {
   margin-bottom: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1500px) {
+
+  .profile {
+    font-size: 3vh;
+  }
+
+  .name {
+    font-size: 4vh;
+  }
+
+  .profileButton {
+    font-size: 2vh;
+  }
+
+  .homeLogo {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  .splashArt {
+    width: 30vh;
+  }
+
+  .aboutHeader {
+    font-size: 3vw;
+  }
+
+  .aboutP {
+    font-size: 2vh;
+  }
+
+  .aboutLanguages {
+    width: 12vw;
+  }
+
+  .aboutLanguages header {
+    font-size: 4vh;
+  }
+
+  .aboutLanguages p {
+    font-size: 1.5vh;
+  }
+
+  .projectsHeader {
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 800px) {
   .navBar {
     position: absolute;
   }
@@ -400,6 +504,11 @@ html {
     font-size: 7vw;
   }
 
+  .about {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
   .aboutHeader {
     font-size: 4vh;
   }
@@ -407,6 +516,11 @@ html {
   .aboutP {
     font-size: 2vh;
     width: 80vw;
+  }
+
+  .splashArt {
+    visibility: hidden;
+    position: absolute;
   }
 
   .aboutLanguages {
@@ -431,11 +545,6 @@ html {
   }
 
 
-  .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .projectPreview {
     width: 20vh;
@@ -462,6 +571,10 @@ html {
     margin-bottom: 0.5vh;
   }
 
+  .projectDetails {
+    align-items: center;
+  }
+
   .projectPreview {
     width: 60vw;
     height: auto;
@@ -474,6 +587,12 @@ html {
     font-weight: 450;
     font-family: var(--body-font);
     font-size: 3vh;
+    color: var(--secondary1);
+
+    width: 60vw;
+    border-right: 10px solid var(--blue1);
+    padding: 20px;
+    border-radius: 20px;
   }
 
   .projectTechnologies {

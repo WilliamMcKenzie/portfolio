@@ -1,5 +1,4 @@
 import { MyRoutes } from './components/myRoutes';
-import './style.css';
 
 
 function App() {
