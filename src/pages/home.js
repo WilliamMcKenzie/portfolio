@@ -3,7 +3,7 @@ import Project from "../components/project";
 import About from "../components/about";
 
 const Home = () => {
-    return (<div className="home">
+    return (<div className="homePage">
         <HomeComponent />
         <About />
         <Project />
