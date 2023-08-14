@@ -195,10 +195,6 @@ html {
 }
 
 
-.profileButton:active {
-  background-color: var(--secondary1);
-}
-
 .about {
   font-weight: 450;
   font-family: var(--body-font);
@@ -400,6 +396,35 @@ html {
     font-size: 6vw;
   }
 
+  .name {
+    font-size: 7vw;
+  }
+
+  .aboutHeader {
+    font-size: 4vh;
+  }
+
+  .aboutP {
+    font-size: 2vh;
+    width: 80vw;
+  }
+
+  .aboutLanguages {
+    width: 16vh;
+  }
+
+  .aboutLanguages header {
+    font-size: 4vh;
+  }
+
+  .aboutLanguages p {
+    font-size: 2vh;
+  }
+
+  .profileButton {
+    font-size: 2vh;
+  }
+
   .homeLogo {
     width: 10vh;
     height: 10vh;
@@ -420,6 +445,10 @@ html {
     display: grid;
   }
 
+  .projectsHeader {
+    font-size: 6vh;
+  }
+
   .project {
     display: flex;
     flex-direction: column;
@@ -430,12 +459,7 @@ html {
     font-weight: 450;
     font-family: var(--body-font);
 
-    color: #959595;
-    border-top: 10px solid var(--primary3);
-
     margin-bottom: 0.5vh;
-
-    background-color: var(--primary2);
   }
 
   .projectPreview {
