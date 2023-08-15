@@ -2,12 +2,26 @@ import teamTetherPreview from '../icons/teamtetherPreview.png'
 import open from '../icons/open.png'
 import { useNavigate } from "react-router-dom";
 import { motion, useScroll } from "framer-motion"
+import Particles from 'react-particles-js';
 
 const Project = () => {
     const navigate = useNavigate();
 
     return (<div className="projects" id="projects">
         <p className="projectsHeader">Projects</p>
+        <Particles
+            params={{
+                particles: {
+                    number: {
+                        value: 200,
+                        density: {
+                            enable: true,
+                            value_area: 1000,
+                        }
+                    },
+                },
+            }}
+        />
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
