@@ -142,6 +142,10 @@ html {
   align-items: center;
 }
 
+.details {
+  letter-spacing: -2px;
+}
+
 .name {
   font-size: 3vw;
 }
@@ -237,8 +241,9 @@ html {
 .aboutP {
   color: var(--secondary2);
   line-height: 1.5;
+  letter-spacing: -0.5px;
   font-size: 1vw;
-  width: 50vw;
+  width: 30vw;
 }
 
 .aboutFlex {
@@ -335,7 +340,8 @@ html {
   font-family: var(--body-font);
   color: var(--secondary2);
   background-color: var(--primary3);
-  border-bottom: 10px solid var(--primary1);
+
+  transform: translateX(-100%);
 
   margin: 1.5vw;
   border-bottom-left-radius: 5vh;
@@ -446,10 +452,11 @@ html {
 
   .aboutP {
     font-size: 2vh;
+    width: 50vw;
   }
 
   .aboutLanguages {
-    width: 12vw;
+    width: 14vw;
   }
 
   .aboutLanguages header {
