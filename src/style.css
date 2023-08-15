@@ -149,6 +149,8 @@ html {
 
   display: flex;
   align-items: center;
+
+  z-index: 2;
 }
 
 .details {
@@ -218,7 +220,7 @@ html {
   font-family: var(--body-font);
   width: 100vw;
 
-  z-index: 1;
+  z-index: 0;
 
   display: flex;
   justify-content: center;
@@ -431,27 +433,139 @@ html {
   margin-bottom: 20px;
 }
 
+.contactButton {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--blue2);
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  margin: auto;
+
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  border-radius: 5px;
+}
+
+.contactButton p {
+  position: relative;
+  font-family: 'Poppins';
+
+  width: 70%;
+  font-size: 2vw;
+  text-align: center;
+  border-right: 2px solid var(--blue3);
+  margin: 0;
+
+  animation-name: slideIn;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.contactButton div {
+  width: 15%;
+
+  display: flex;
+
+  animation-name: enlargeOut;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.contactButton div img {
+  width: 40px;
+  padding: 7.5%;
+
+  animation-name: enlargeOut;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.contactButton:hover p {
+  animation-name: slideOut;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+.contactButton:hover div {
+  animation-name: enlargeIn;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes enlargeIn {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes enlargeOut {
+  75% {
+    width: 100%;
+  }
+
+  25% {
+    width: 15%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    margin-left: -100%;
+    border: none;
+  }
+
+  100% {
+    margin-left: 0px;
+    border-right: 2px solid var(--blue3);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    margin-left: 0px;
+    border: none;
+  }
+
+  99% {
+    margin-left: -100%;
+    border: none;
+  }
+
+  100% {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 1500px) {
 
   .profile {
-    font-size: 3vh;
+    font-size: 3vw;
   }
 
   .name {
-    font-size: 4vh;
+    font-size: 4vw;
   }
 
   .profileButton {
-    font-size: 2vh;
+    font-size: 2vw;
   }
 
   .homeLogo {
-    width: 10vh;
-    height: 10vh;
+    width: 10vw;
+    height: 10vw;
   }
 
   .splashArt {
-    width: 30vh;
+    width: 30vw;
   }
 
   .aboutHeader {
@@ -459,7 +573,7 @@ html {
   }
 
   .aboutP {
-    font-size: 2vh;
+    font-size: 2vw;
     width: 50vw;
   }
 
@@ -468,15 +582,15 @@ html {
   }
 
   .aboutLanguages header {
-    font-size: 4vh;
+    font-size: 4vw;
   }
 
   .aboutLanguages p {
-    font-size: 1.5vh;
+    font-size: 1.5vw;
   }
 
   .projectsHeader {
-    font-size: 4vh;
+    font-size: 4vw;
   }
 }
 

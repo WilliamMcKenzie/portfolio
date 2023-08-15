@@ -1,6 +1,7 @@
 import HomeComponent from "../components/home";
 import Project from "../components/project";
 import About from "../components/about";
+import Contact from "../components/contact";
 import '../style.css';
 import BackgroundParticle from "../components/backgroundParticle";
 
@@ -10,6 +11,7 @@ const Home = () => {
         <HomeComponent />
         <About />
         <Project />
+        <Contact />
     </div>)
 }
 
