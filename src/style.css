@@ -668,6 +668,10 @@ html {
     font-size: 4vw;
   }
 
+  .projectPreview {
+    width: 40vh;
+  }
+
   .contactP {
     max-width: 40vw;
   }
