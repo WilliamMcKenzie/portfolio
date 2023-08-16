@@ -28,6 +28,19 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
 
 #tsparticles {
@@ -433,67 +446,122 @@ html {
   margin-bottom: 20px;
 }
 
+#contact {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactContent {
+  margin-left: 20px;
+  background-color: white;
+  box-shadow: 0 0 1000px 100px white;
+
+  display: flex;
+  flex-direction: row;
+}
+
 .contactButton {
   display: flex;
   align-items: center;
 
-  background-color: var(--blue2);
   width: 300px;
   height: 100px;
   line-height: 100px;
-  margin: auto;
+  margin: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 
   color: #fff;
   cursor: pointer;
   overflow: hidden;
   border: none;
+  padding: 0px;
   border-radius: 5px;
 }
 
+.email {
+  background-color: #EA4335;
+}
+
+.instagram {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.discord {
+  background-color: #5865F2;
+}
+
+.contactHeader {
+  font-size: 3vw;
+  margin-bottom: 100px;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+.contactB {
+  color: var(--secondary2);
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactP {
+  color: var(--secondary2);
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  max-width: 20vw;
+  margin: 0;
+}
+
 .contactButton p {
+  display: flex;
   position: relative;
   font-family: 'Poppins';
 
-  width: 70%;
-  font-size: 2vw;
+  width: 60%;
+  height: 80%;
+  font-size: 1.25vw;
   text-align: center;
-  border-right: 2px solid var(--blue3);
   margin: 0;
 
   animation-name: slideIn;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .contactButton div {
   width: 15%;
+  padding: 12.5%;
+  justify-content: center;
 
   display: flex;
 
   animation-name: enlargeOut;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
 }
 
 .contactButton div img {
-  width: 40px;
   padding: 7.5%;
-
-  animation-name: enlargeOut;
-  animation-fill-mode: forwards;
-  animation-duration: 0.5s;
 }
 
 .contactButton:hover p {
   animation-name: slideOut;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
 }
 
 .contactButton:hover div {
   animation-name: enlargeIn;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.25s;
 }
 
 @keyframes enlargeIn {
@@ -503,16 +571,21 @@ html {
 
   to {
     width: 100%;
+    background-color: hsl(38, 100%, 92%, 0.37)
   }
 }
 
 @keyframes enlargeOut {
-  75% {
+  100% {
+    width: 15%;
+  }
+
+  50% {
     width: 100%;
   }
 
-  25% {
-    width: 15%;
+  0% {
+    width: 100%;
   }
 }
 
@@ -520,28 +593,30 @@ html {
   0% {
     margin-left: -100%;
     border: none;
+
+    position: absolute;
+    visibility: hidden;
   }
 
   100% {
     margin-left: 0px;
-    border-right: 2px solid var(--blue3);
+    border-right: 2px solid var(--primary3);
   }
 }
 
 @keyframes slideOut {
   0% {
     margin-left: 0px;
-    border: none;
-  }
-
-  99% {
-    margin-left: -100%;
-    border: none;
   }
 
   100% {
+    margin-left: -100%;
+    border: none;
+
     position: absolute;
     visibility: hidden;
+    width: 0px;
+    height: 0px;
   }
 }
 
@@ -591,6 +666,14 @@ html {
 
   .projectsHeader {
     font-size: 4vw;
+  }
+
+  .contactP {
+    max-width: 40vw;
+  }
+
+  .contactButton p {
+    font-size: 2vh;
   }
 }
 
@@ -673,12 +756,6 @@ html {
     height: 10vh;
   }
 
-
-
-  .projectPreview {
-    width: 20vh;
-  }
-
   .projectRow {
     display: grid;
   }
@@ -705,7 +782,7 @@ html {
   }
 
   .projectPreview {
-    width: 60vw;
+    width: 40vh;
     height: auto;
     object-fit: cover;
     border-bottom-left-radius: 20px;
@@ -730,6 +807,29 @@ html {
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
+  }
+
+  .contactHeader {
+    font-size: 4vh;
+  }
+
+  .contactContent {
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 0 0 1000px 100px white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contactP {
+    max-width: 60vw;
+  }
+
+
+  .contactButton {
+    width: 60vw;
   }
 }
 

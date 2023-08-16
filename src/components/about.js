@@ -8,7 +8,7 @@ const About = () => {
         <SplashArt className="splashArt" />
         <div className="aboutContent">
             <p className="aboutHeader">About Me</p>
-            <p className="aboutP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className="aboutP">Hey there! I'm William, a lifelong explorer from the beautiful land of Canada. With an unwavering passion for technology and a curious mind, I've always been on the lookout for new opportunities to learn and grow. My journey began at a young age when I discovered the world of pixel art, igniting my artistic spirit and leading me to become a skilled pixel artist since the age of 13. Beyond my creative endeavors, you'll find me on the Taekwondo mat, where I've earned a blue belt. I'm all about embracing challenges and pushing boundaries in both the digital and physical realms. Welcome to my corner of the web, where I blend my tech enthusiasm, artistic flair, and a constant thirst for knowledge. Join me on this exciting journey!</p>
             <div className="aboutFlex">
                 <div className="aboutLanguages">
                     <header>4</header>
