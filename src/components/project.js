@@ -14,7 +14,7 @@ const Project = () => {
             whileInView={{ opacity: 1 }}
         />
         <motion.div className="teamTether project" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1, x: 0, }} transition={{ duration: 0.5 }}>
-            <div className="previewContainer" onClick={() => window.open("http://teamtether.williamqm.com", "_blank")}>
+            <div className="previewContainer" onClick={() => window.open("http://teamtether.williamqm.com/register", "_blank")}>
                 <img className="projectPreview" src={teamTetherPreview} />
                 <img className="projectOpen" src={open} />
             </div>
