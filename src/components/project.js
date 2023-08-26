@@ -43,7 +43,7 @@ const Project = () => {
                 <img className="projectOpen" src={open} />
             </div>
             <div className="projectDetails">
-                <p className="projectTitle">TeamTether</p>
+                <p className="projectTitle">Linear Equation Calc</p>
                 <div className="projectTechnologies">
                     <p className="projectHeader">Languages</p>
                     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"></img>
