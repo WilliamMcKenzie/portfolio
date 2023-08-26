@@ -1,5 +1,5 @@
 import teamTetherPreview from '../icons/teamtetherPreview.png'
-import linearPreview from '../icons/linearPreview.png'
+import linearPreview from '../icons/linearPreview.jpg'
 import open from '../icons/open.png'
 import { useNavigate } from "react-router-dom";
 import { motion, useScroll } from "framer-motion"
