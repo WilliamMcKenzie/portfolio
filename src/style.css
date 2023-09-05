@@ -514,8 +514,10 @@ html {
   color: var(--secondary2);
   line-height: 1.5;
   letter-spacing: -0.5px;
-  max-width: 20vw;
+  max-width: 300px;
   margin: 0;
+  max-height: 340px;
+  padding-bottom: 20px;
 }
 
 .contactButton p {
@@ -674,7 +676,7 @@ html {
   }
 
   .contactP {
-    max-width: 40vw;
+    max-width: 300px;
   }
 
   .contactButton p {
