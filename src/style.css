@@ -367,21 +367,16 @@ html {
   transform: translateX(-100%);
 
   margin: 1.5vw;
-  border-bottom-left-radius: 5vh;
-  border-bottom-right-radius: 5vh;
 }
 
 .previewContainer {
   position: relative;
   display: inline;
-
-  border-right: 10px solid rgba(202, 240, 248, 1);
 }
 
 .projectPreview {
   width: 50vw;
   height: 60vh;
-  border-bottom-left-radius: 5vh;
 
   object-fit: cover;
   border-top: none;
@@ -427,12 +422,10 @@ html {
   width: 100%;
   line-height: 1.2;
 
-  color: var(--primary3);
-  background: rgb(202, 240, 248);
-  background: linear-gradient(90deg, rgba(202, 240, 248, 1) 0%, rgba(72, 202, 228, 1) 62%);
   padding-top: 30px;
   padding-bottom: 30px;
-  text-align: center;
+  margin-left: 10px;
+  text-align: left;
 }
 
 .projectTechnologies {
