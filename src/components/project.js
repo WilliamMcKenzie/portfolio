@@ -17,7 +17,7 @@ const Project = () => {
             whileInView={{ opacity: 1 }}
         />
         <motion.div className="teamTether project" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1, x: 0, }} transition={{ duration: 0.5 }}>
-            <div className="previewContainer" onClick={() => window.open("http://linear.williamqm.com", "_blank")}>
+            <div className="previewContainer" onClick={() => window.open("http://bulkinator.williamqm.com", "_blank")}>
                 <img className="projectPreview" src={bulkinatorPreview} />
                 <img className="projectOpen" src={open} />
             </div>
@@ -41,7 +41,7 @@ const Project = () => {
                 </div>
             </div>
         </motion.div>
-        <motion.div className="teamTether project" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1, x: 0, }} transition={{ duration: 0.5 }}>
+        {/* <motion.div className="teamTether project" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1, x: 0, }} transition={{ duration: 0.5 }}>
             <div className="previewContainer" onClick={() => window.open("http://teamtether.williamqm.com/register", "_blank")}>
                 <img className="projectPreview" src={teamTetherPreview} />
                 <img className="projectOpen" src={open} />
@@ -63,7 +63,7 @@ const Project = () => {
                     <img src="https://img.shields.io/badge/CSS-317791?&style=for-the-badge&logo=css3&logoColor=white"></img>
                 </div>
             </div>
-        </motion.div>
+        </motion.div> */}
         <motion.div className="teamTether project" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1, x: 0, }} transition={{ duration: 0.5 }}>
             <div className="previewContainer" onClick={() => window.open("http://linear.williamqm.com", "_blank")}>
                 <img className="projectPreview" src={linearPreview} />
